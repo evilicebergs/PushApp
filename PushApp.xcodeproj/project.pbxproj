@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D39CEE9BBE597A24824671FB /* Pods_PushApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F96130A379B46A5A043C9DE /* Pods_PushApp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		16DD7446415833714ED1145D /* Pods-PushApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushApp.release.xcconfig"; path = "Target Support Files/Pods-PushApp/Pods-PushApp.release.xcconfig"; sourceTree = "<group>"; };
+		4F96130A379B46A5A043C9DE /* Pods_PushApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PushApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D10D7111371FBA30C7620F /* Pods-PushApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushApp.debug.xcconfig"; path = "Target Support Files/Pods-PushApp/Pods-PushApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F4EEF6612CEF992D003C9A78 /* PushApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -23,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39CEE9BBE597A24824671FB /* Pods_PushApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D19F4EBE74749D09D9652C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F96130A379B46A5A043C9DE /* Pods_PushApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1F2EBE6C2AC56E7202B48C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3D10D7111371FBA30C7620F /* Pods-PushApp.debug.xcconfig */,
+				16DD7446415833714ED1145D /* Pods-PushApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F4EEF6582CEF992D003C9A78 = {
 			isa = PBXGroup;
 			children = (
 				F4EEF6632CEF992D003C9A78 /* PushApp */,
 				F4EEF6622CEF992D003C9A78 /* Products */,
+				E1F2EBE6C2AC56E7202B48C8 /* Pods */,
+				1D19F4EBE74749D09D9652C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +79,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4EEF66F2CEF992F003C9A78 /* Build configuration list for PBXNativeTarget "PushApp" */;
 			buildPhases = (
+				D7F27E05B4B3F70F433E9AFA /* [CP] Check Pods Manifest.lock */,
 				F4EEF65D2CEF992D003C9A78 /* Sources */,
 				F4EEF65E2CEF992D003C9A78 /* Frameworks */,
 				F4EEF65F2CEF992D003C9A78 /* Resources */,
+				5547CEC3E1D3FC3B8F504326 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -64,8 +93,6 @@
 				F4EEF6632CEF992D003C9A78 /* PushApp */,
 			);
 			name = PushApp;
-			packageProductDependencies = (
-			);
 			productName = PushApp;
 			productReference = F4EEF6612CEF992D003C9A78 /* PushApp.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +140,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5547CEC3E1D3FC3B8F504326 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PushApp/Pods-PushApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PushApp/Pods-PushApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PushApp/Pods-PushApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7F27E05B4B3F70F433E9AFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PushApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4EEF65D2CEF992D003C9A78 /* Sources */ = {
@@ -246,6 +315,7 @@
 		};
 		F4EEF6702CEF992F003C9A78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3D10D7111371FBA30C7620F /* Pods-PushApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -254,6 +324,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PushApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 3Z5R6WRVTZ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -265,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.evilicebergs.PushApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evilicebergs.PushApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -275,6 +346,7 @@
 		};
 		F4EEF6712CEF992F003C9A78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16DD7446415833714ED1145D /* Pods-PushApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -283,6 +355,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PushApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 3Z5R6WRVTZ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -294,7 +367,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.evilicebergs.PushApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evilicebergs.PushApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
